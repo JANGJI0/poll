@@ -1,4 +1,16 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page import="model. *" %>
+<%@ page import="dto. *" %>
+<%
+	// updatePollForm 안에 item , question 같이 넣기 위해 값을 받아야한다.
+	int questionNum = Integer.parseInt(request.getParameter("num"));
+
+	QuestionDao questionDao = new QuestionDao();
+	Question q = questionDao.selectQuestionList(question); // 질문 가져오기
+	
+%>
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -6,10 +18,8 @@
 <title></title>
 </head>
 <body>
-	<h1>투표프로그램</h1>
-	<hr>
-	<h2>설문작성</h2>
-	<form method="post" action="/poll/insertPollAction.jsp">
+	<h1>설문 전체수정</h1>
+	<form method="post" action="/poll/updatePollAction.jsp">
 		<table border="1">
 		<tr>
 			<td>질문</td>
@@ -57,9 +67,8 @@
 			</td>
 		</tr>
 		</table>
-		<button type="submit">작성하기</button>
-		<button type="reset">다시쓰기</button>
-		<a href="/poll/pollList.jsp"><button type="button">리스트</button></a>
+		<a href="/poll/pollList.jsp"><button type="button">수정하기</button></a>
+		<a href="/poll/pollList.jsp"><button type="button">수정취소</button></a>
 	</form>
 </body>
 </html>

@@ -41,8 +41,9 @@
 				<th>주제</th>
 				<th>시작일</th>
 				<th>종료일</th>
-				<th>타입</th>
-				<th>투표하기</th>
+				<th>복수투표</th>
+				<th>투표</th>
+				<th>삭제</th>
 			</tr>
 			<%
 				String today = java.time.LocalDate.now().toString(); // "2025-04-03" 같은 문자열
@@ -60,8 +61,26 @@
 				<td><%=q.getTitle() %></td>
 				<td><%=q.getStartdate() %></td>
 				<td><%=q.getEnddate() %></td>
-				<td><%=q.getType() %></td>
+				<td>
+				<%
+					if(q.getType() == 1) {
+				%>
+						O
+				<%
+					} else {
+				%>
+						X
+				<%
+					}
+				%>
+				</td>
 				<td><%=status %></td>
+				<td>
+					<a href="/poll/deletePoll.jsp?num=<%=q.getNum() %>"
+					onclick='return confirm("정말 삭제할까요?"");'>
+					삭제하기
+					</a>
+				</td>
 			</tr>
 			<%
 				}
