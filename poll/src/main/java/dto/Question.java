@@ -7,6 +7,7 @@ public class Question {
 	private String enddate;
 	private String createdate;
 	private int type;
+	private int cnt;
 	
 	public int getNum() {
 		return num;
@@ -44,6 +45,11 @@ public class Question {
 	public void setType(int type) {
 		this.type = type;
 	}
-	
+	public int getCnt() {
+		return cnt;
+	}
+	public void setCnt(int cnt) {
+		this.cnt = cnt;
+	}
 	
 }

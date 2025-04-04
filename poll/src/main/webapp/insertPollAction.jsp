@@ -17,7 +17,7 @@
 	// 공백요소를 제거 후 새로운 배열(ArrayList<Sting>에 저장
 	ArrayList<String> contentList = new ArrayList<>();
 	for(String c : content) {
-		if(c.equals("")) {
+		if(!c.equals("")) {
 			contentList.add(c);
 		}
 	}
