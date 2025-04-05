@@ -155,13 +155,13 @@
 			
 				<td>
 				<%
-					if(enddate.compareTo(strToday) > 0) {
+					if(enddate.compareTo(strToday) >= 0) {
 				%>
-						수정불가
+					<a href="/poll/updateQuestionEnddateForm.jsp?num=<%=q.getNum() %>">종료일 수정하기</a>
 				<%
 					} else {
 				%>
-					<a href="/poll/updateQuestionEnddateForm.jsp?num=<%=q.getNum() %>">종료일 수정하기</a>
+						수정불가
 				<%
 					}
 				%>

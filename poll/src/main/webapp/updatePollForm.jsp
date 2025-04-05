@@ -42,7 +42,7 @@
 			<%
 				for(Item item : list) {
 			%>
-					<td><%=i %>) <input type="text" name="content" "value=<%=item.getContent() %>"></td>
+					<td><%=i %>) <input type="text" name="content" value="<%=item.getContent() %>"></td>
 			<%
 					if(i % 2 == 0) {
 			%>
@@ -54,7 +54,7 @@
 				
 				while(i <= 8) {
 			%>
-					<td><%=i %>) <input type="text" next="content"></td>
+					<td><%=i %>) <input type="text" name="content"></td>
 			<%
 				if(i % 2 == 0) {
 			%>
@@ -84,8 +84,8 @@
 			</td>
 		</tr>
 		</table>
-		<a href="/poll/pollList.jsp"><button type="button">수정하기</button></a>
-		<a href="/poll/pollList.jsp"><button type="button">수정취소</button></a>
+		<a href="/poll/pollList.jsp"><button type="submit">수정하기</button></a>
+		<a href="/poll/pollList.jsp"><button type="submit">수정취소</button></a>
 	</form>
 </body>
 </html>

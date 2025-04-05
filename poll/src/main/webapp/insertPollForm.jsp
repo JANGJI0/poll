@@ -2,6 +2,11 @@
 <!DOCTYPE html>
 <html>
 <head>
+<!-- Latest compiled and minified CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Latest compiled JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <meta charset="UTF-8">
 <title></title>
 </head>
@@ -10,7 +15,7 @@
 	<hr>
 	<h2>설문작성</h2>
 	<form method="post" action="/poll/insertPollAction.jsp">
-		<table border="1">
+		<table class="table table-dark table-hover">
 		<tr>
 			<td>질문</td>
 			<td colspan="2">

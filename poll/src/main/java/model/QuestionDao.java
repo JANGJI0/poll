@@ -194,6 +194,30 @@ public class QuestionDao {
 		
 	}
 	
+		// question 테이블에서 해당 num값이 속한 enddate 값 수정 ( 따로 만드는게 유지보수도 용이하다.)
+		public void updateQuestionEnddate(int num, String enddate) throws ClassNotFoundException, SQLException {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			Connection conn = null;
+			PreparedStatement stmt = null;
+			String sql = "update question set enddate = ? WHERE num = ?";
+			conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/poll", "root", "java1234");
+			stmt = conn.prepareStatement(sql);
+			stmt.setString(1, enddate);
+			stmt.setInt(2, num);
+			 // 디버깅
+			System.out.println(stmt);
+			
+			int row = stmt.executeUpdate();
+			
+			if(row == 1) {
+				System.out.println("수정 완료");
+			} else {
+				System.out.println("수정 실패");
+				
+			}
+			
+			conn.close();
+		}
 		/*
 		public Question selectQuestionOne(int num) throws ClassNotFoundException, SQLException {
 			Question q = null;

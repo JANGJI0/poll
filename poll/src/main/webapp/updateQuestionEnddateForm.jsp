@@ -24,7 +24,7 @@
 			<input type="hidden" name="num" value="<%=num %>">
 			<input type="hidden" name="title" value="<%=question.getTitle() %>">
 			<input type="hidden" name="startdate" value="<%=question.getStartdate() %>">
-			<input type="hidden" name="type" value="<%=question.getTitle() %>">
+			<input type="hidden" name="type" value="<%=question.getType() %>">
 			<table border="1">
 				<tr>
 					<td>종료일</td>

@@ -33,7 +33,7 @@
 </head>
 <body>
 	<div>
-		<a herf="/poll/pollList.jsp">리스트</a>
+		<a href="/poll/pollList.jsp">리스트</a>
 	</div>
 	<h1><%=qnum %>번 설문 투표결과</h1>
 	<table border="1" width="80%">
@@ -71,7 +71,7 @@
 						}
 					%>
 				</td>
-				<td><%=i.getContent() %></td>
+				<td><%=i.getCount() %></td>
 			</tr>
 		<%
 			}
